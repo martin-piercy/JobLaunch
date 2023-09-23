@@ -1,7 +1,7 @@
 ####################################################################################################################################
 These scripts are made to be run on the client system that has NGC CLI installed.
 
-NOTE: Your NGC CLI command that the script will ask for MUST have the --format_type json option at the end of it. 
+NOTE: Your NGC CLI command that the script will ask for MUST have the "--format_type json" option at the end of it. 
 
 
 To use these please execute launch_job.sh 
