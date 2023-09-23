@@ -41,8 +41,8 @@ echo -n "##  Please enter 1 for interactive mode or 2 for background mode: "    
 read mode                                                                                       
 
 #Check users mode choice is valid
-if [[ $mode -le "0" || $mode -ge "2" ]]; then
-   echo "## Please enter 1 for interactive or 2 for background mode"
+if [[ $mode -le "0" || $mode -ge "3" ]]; then
+   echo "## Please enter 1 for interactive or 2 for background mode"                            | tee -a "$logFileName"
    exit 1
 fi
 
@@ -61,7 +61,7 @@ if [[ $script == "1" ]]; then
    echo "##  We will also check jobs in seconds, not minutes so you can observe behaviour quickly" | tee -a "$logFileName"
   
    monitoringScript=$DemoMonitoringScript
-   echo "##  We will launch $monitoringScript"  
+   echo "##  We will launch $monitoringScript"                                                  | tee -a "$logFileName"
 
 elif [[ $script == "2" ]]; then
     echo "##"                                                                                   | tee -a "$logFileName"
@@ -69,10 +69,10 @@ elif [[ $script == "2" ]]; then
     
    monitoringScript=$ProdMonitoringScript
    
-   echo "##  We will launch $monitoringScript" 
+   echo "##  We will launch $monitoringScript"                                                  | tee -a "$logFileName"
    
 else
-    echo "##  You did not select 1 for DEMO or 2 for PRODUCTION"
+    echo "##  You did not select 1 for DEMO or 2 for PRODUCTION"                                | tee -a "$logFileName"
     exit 1 
 fi
 
