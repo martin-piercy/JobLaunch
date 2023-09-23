@@ -4,7 +4,7 @@ These scripts are made to be run on the client system that has NGC CLI installed
 NOTE: Your NGC CLI command that the script will ask for MUST have the "--format_type json" option at the end of it. 
 
 
-To use these please execute launch_job.sh 
+To use this tool, please execute launch_job.sh 
 Note that logs will be created in the same folder as the scripts.
 To watch logs please use tail -f $logName
 
